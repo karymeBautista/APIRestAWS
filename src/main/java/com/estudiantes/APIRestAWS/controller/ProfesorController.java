@@ -22,7 +22,7 @@ public class ProfesorController {
     }
 
     @GetMapping("")
-    @Operation(summary = "Obtener una lista de todos los profesores")
+    @Operation(summary = "Obtener todos los profesores")
     public ResponseEntity<List<ProfesorDTO>> getAllProfesores() {
         List<ProfesorDTO> profesores = this.profesorService.getProfesores();
         return new ResponseEntity<>(profesores, HttpStatus.OK);
@@ -46,7 +46,7 @@ public class ProfesorController {
     }
 
     @PutMapping("/{id}")
-    @Operation(summary = "Actualizar un profesor por ID")
+    @Operation(summary = "Editar profesor por ID")
     public ResponseEntity<ProfesorDTO> editProfesorByid(@Valid @RequestBody PreProfesorInfo info, @PathVariable int id){
         ProfesorDTO newProfesor = this.profesorService.actualizar(id,info);
         return new ResponseEntity<>(newProfesor,HttpStatus.OK);

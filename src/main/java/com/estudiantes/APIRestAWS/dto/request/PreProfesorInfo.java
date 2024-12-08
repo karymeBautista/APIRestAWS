@@ -19,6 +19,6 @@ public class PreProfesorInfo {
     @NotBlank
     private String apellidos;
 
-    @Positive(message = "El campo 'horasClase' debe ser un número entero mayor a 0\"")
+    @Positive(message = "El campo 'horasClase' debe ser un número entero positivo")
     private  int horasClase;
 }

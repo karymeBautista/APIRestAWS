@@ -10,7 +10,7 @@ public class OpenAPIConfig {
         return new OpenAPI().info(new Info()
                 .title("API Rest AWS")
                 .version("v0.0.1")
-                .description("Primera entrega AWS- Bautista Karyme")
+                .description("Segunda entrega proyecto AWS")
                 .license(new License()
                         .name("Apache 2.0")
                         .url("https://www.proyectoAWSRest.com/")
