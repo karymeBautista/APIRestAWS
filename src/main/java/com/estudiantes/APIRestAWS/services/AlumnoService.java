@@ -158,7 +158,7 @@ public class AlumnoService {
             Optional<AlumnoSchema> alumnoExistente = alumnoRepository.findById(id);
             if (alumnoExistente.isPresent()) {
                 AlumnoSchema alumno = alumnoExistente.get();
-                alumno.setFotoPerfilUrl("https://a17003222-s3.s3.us-east-1.amazonaws.com/"+filename);
+                alumno.setFotoPerfilUrl("https://a17003222-s3.s3.amazonaws.com/"+filename);
                 AlumnoSchema alumnoActualizado = alumnoRepository.save(alumno);
                 bucketRepository.uploadFileToS3( "a17003222-s3", filename,tempFile);
                 return AlumnoDTO.getFromSchema(alumnoActualizado);
